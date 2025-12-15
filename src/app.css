@@ -1,0 +1,22 @@
+@layer reset, base, tokens, recipes, utilities;
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-jp.min.css");
+@import url("https://cdn.jsdelivr.net/npm/ownglyph_pd-h@0.0.0/ownglyphPDH/ownglyph_pd-h.css");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: "Pretendard JP", -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

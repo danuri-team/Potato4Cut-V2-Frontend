@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bun add:*)",
+      "Bash(bun remove:*)",
+      "Bash(rm:*)",
+      "Bash(bunx panda init:*)",
+      "Bash(bunx panda:*)",
+      "Bash(bun run build)",
+      "mcp__figma-dev-mode-mcp-server__get_design_context",
+      "mcp__figma-dev-mode-mcp-server__get_screenshot",
+      "Bash(mkdir:*)",
+      "Bash(curl:*)",
+      "mcp__figma-dev-mode-mcp-server__get_metadata"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
