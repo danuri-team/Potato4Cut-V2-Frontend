@@ -1,7 +1,26 @@
 <script lang="ts">
-  import { css } from "../../styled-system/css";
+  import { css } from "../../../../styled-system/css";
   import IconDownload from "~icons/lucide/download";
   import IconChevronRight from "~icons/lucide/chevron-right";
+  import type { PageData } from "./$types";
+
+  interface Props {
+    data: PageData;
+  }
+
+  let { data }: Props = $props();
+
+  function handleDownload() {
+    const filename = `potato-4cut-${data.photo.data.shareCode}.png`;
+    const downloadUrl = `/api/download?url=${encodeURIComponent(data.photo.data.composedImageUrl)}&filename=${encodeURIComponent(filename)}`;
+
+    const link = document.createElement("a");
+    link.href = downloadUrl;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 
   const containerStyle = css({
     position: "relative",
@@ -181,8 +200,17 @@
     <img src="/logo.svg" alt="감자네컷" />
 
     <div class={mainContentStyle}>
+      <img
+        src={data.photo.data.composedImageUrl}
+        alt="main_image"
+        loading="lazy"
+        decoding="async"
+        width="380"
+        height="622"
+      />
+
       <div class={buttonGroupStyle}>
-        <button type="button" class={outlinedButtonStyle}>
+        <button type="button" class={outlinedButtonStyle} onclick={handleDownload}>
           <span>다운로드</span>
           <IconDownload />
         </button>
