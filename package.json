@@ -27,6 +27,7 @@
     "@iconify-json/lucide": "^1.2.73",
     "@iconify-json/simple-icons": "^1.2.59",
     "@iconify-json/twemoji": "^1.2.4",
+    "@sveltejs/adapter-cloudflare": "^7.2.4",
     "dayjs": "^1.11.19",
     "svelte-sonner": "^1.0.6"
   }
